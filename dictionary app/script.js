@@ -36,7 +36,6 @@ const getWordInfo = async (word) => {
         }
         // Adding Read more button
         resultDiv.innerHTML += `<div><a href="${data[0].sourceUrls}" target="_blank">Read More</a></div>`
-        console.log(data);
         
         
     } catch (error) {
