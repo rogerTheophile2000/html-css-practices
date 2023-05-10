@@ -30,7 +30,7 @@ body {
     border-radius: var(--border-radius);
 }
 
-.qr-heqder h1{
+.qr-header h1{
     font-size: 26px;
     text-align: center;
     display: flex;
@@ -41,12 +41,18 @@ body {
     text-transform: uppercase;
 }
 
-.qr-heqder input {
+.qr-header div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.qr-header input {
     width: 100%;
     margin-block: 12px;
 }
 
-.qr-heqder input, select {
+.qr-header input, select {
     padding: 8px;
     border-radius: var(--border-radius);
     font-size: 18px;
@@ -54,21 +60,21 @@ body {
     border: 2px solid var(--border-color);
 }
 
-.qr-heqder label {
+.qr-header label {
     color: var(--secondary-color);
     font-size: 20px;
 }
 
-.qr-heqder data {
+.qr-header data {
     display: flex;
     justify-content: center;
 }
 
 .qr-footer{
-    margin-top: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 15px;
 }
 
 .qr-footer a{
@@ -80,4 +86,30 @@ body {
     color: var(--primary-color);
     font-weight: 600;
     border-radius: var(--border-radius);
+}
+
+.qr-body {
+    margin: 20px;
+    display: grid;
+    place-items: center;
+}
+
+.qr-body img {
+    max-width: 100%;
+    max-height: 100%;
+    margin-block: 10px;
+    padding: 20px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--border-radius);
+}
+
+@media screen and (max-width: 520px) {
+    .box {
+        width: 80%;
+    }
+
+    .qr-footer a {
+        padding: 12px;
+        font-size: 16px;
+    }
 }
