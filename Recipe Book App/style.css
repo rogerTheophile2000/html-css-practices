@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: #0c2461;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+h1 {
+    font-size: 2.5rem;
+    margin: 0 auto;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 1250px;
+    padding: 20px;
+}
+
+.reset {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#reset-items{
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    background-color: #0c2461;
+    color: #fff;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#reset-items:hover {
+    background-color: #1e3799;
+    color: #fff;
+}
+
+.recipe-item {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, .2);
+    padding: 20px;
+    border: none;
+    border-radius: 5px;
+    overflow: hidden;
+    flex-wrap: wrap;
+}
+
+.recipe-item img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.recipe-item h2 {
+    font-size: 2rem;
+    max-width: 300px;
+    text-align: center;
+}
+
+.recipe-item p {
+    padding: 10px;
+    font-size: 1rem;
+    color: #777;
+    max-width: 600px;
+}
+
+.recipe-item a {
+    text-align: center;
+    background-color: #0c2461;
+    color: #fff;
+    max-width: 150px;
+    padding: 10px 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    border-radius: 5px;
+    border: none;
+}
+
+.recipe-item a:hover {
+    background-color: #1e3799;
+    color: #fff;
+}
+
+@media screen and (max-width : 768px){
+        .container {
+            max-width: 90%;
+        }
+
+        .recipe-item {
+            flex-wrap: wrap;
+            flex-direction: column;
+        }
+
+        .recipe-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .recipe-item h2 {
+            font-size: 1.5rem;
+        }
+
+        .recipe-item p {
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+}
