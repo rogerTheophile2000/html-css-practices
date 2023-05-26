@@ -53,11 +53,13 @@ nav ul {
 
 nav ul li {
     list-style-type: none;
+    color: var(--secondary-color);
 }
 
 nav ul li a {
     text-decoration: none;
     font-weight: 600;
+    color: var(--secondary-color);
 }
 
 nav ul li:not(:last-child) a:hover,
@@ -91,11 +93,20 @@ nav .humberger {
 * ? main style
 */
 
-main {
+main, footer {
     color: #000;
     width: 90%;
     margin: 2rem auto;
 }
+.page-title {
+    width: 100%;
+    text-align: center;
+}
+
+.page-title h1 {
+    font-size: 3rem;
+}
+
 
 .articles {
     display: grid;
@@ -105,6 +116,7 @@ main {
     /* background-color: #; */
     grid-template-columns: repeat(3, auto);
     gap: 3rem;
+    margin: 1rem auto;
 }
 
 .article {
@@ -132,12 +144,29 @@ main {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: flex-start;
-    background-color: red;
+    width: 100%;
 }
 
 .article .body .title {
-    color: var(--secondary-color);
     font-family: 1.5rem;
+}
+
+.article .body .body-text {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+
+}
+
+.article .body .body-text img {
+    width: 40px;
+    height: 40px;
+}
+
+.article .body .body-text h4{
+    color: #30363f;
 }
 
 .article a{
@@ -149,6 +178,39 @@ main {
     border-radius: 6px;
     cursor: pointer;
     color: var(--secondary-color);
+}
+
+.button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1rem;
+}
+
+
+.pagination {
+    width: 100%;
+    background-color: var(--secondary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0;
+    border-radius: var(--border-radius);
+}
+
+.pagination a {
+    text-decoration: none;
+    color: #000;
+    cursor: pointer;
+    font-size: 1.3rem;
+}
+
+.footer {
+    background-color: var(--secondary-color);
+    padding: 1rem;
+    margin-bottom: 0;
 }
 
 
@@ -186,6 +248,35 @@ main {
     
 }
 
+@media screen and (max-width: 1000px) {
+    nav .humberger {
+        display: flex;
+        cursor: pointer;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    nav ul.ham_active {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        gap: 24px;
+        height: 320px;
+        background-color: #30363f;
+    }
+
+    .articles {
+        grid-template-columns: repeat(2, auto);
+        justify-content: center;
+    }    
+}
 @media screen and (max-width: 700px) {
     nav .humberger {
         display: flex;
@@ -211,7 +302,9 @@ main {
     }
 
     .articles {
+        width: 80vw;
         grid-template-columns: repeat(1, auto);
+        justify-content: center;
     }    
 }
 
