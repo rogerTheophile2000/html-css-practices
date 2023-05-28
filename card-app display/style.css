@@ -247,7 +247,6 @@ main, footer {
 }
 
 .article-detaille .title {
-    margin: 2rem;
     margin-top: 0rem;
     width: 100%;
     text-align: center;
@@ -255,13 +254,103 @@ main, footer {
 
 .article-text{
     font-size: 1rem;
+    padding: 1rem;
     font-family: sans-serif;
     line-height: 1.4rem;
 }
 
+.article-timer {
+    margin: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--primary-color);
+}
+
+.article-timer p {
+    font-size: 1.3rem;
+    padding: 1rem;
+}
+
+.article-buttons {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.article-buttons a {
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--secondary-color);
+    background-color: var(--btn-background);
+    padding: 8px 1rem;
+    border-radius: var(--border-radius);
+    transition: background-color o.3s ease;
+}
+
+.article-buttons a:hover {
+    background-color: var(--btn-background-hover);
+}
+
+.article-buttons .delete, .feeds-button .delete {
+    background-color: rgb(201, 9, 9);
+    transition: background-color o.3s ease;
+}
+.article-buttons .delete:hover, .feeds-button .delete:hover{
+    background-color: rgb(255, 6, 6);
+}
+
 .feddbacks {
-    background-color: red;
+    background-color: var(--secondary-color);
     max-width: 30vw;
+    padding: 1rem;
+    border-radius: var(--border-radius);
+}
+
+.feddbacks .title {
+    text-align: center;
+    margin: 1rem 0;
+    margin-top: 0;
+}
+
+.feddbacks .feddbacks-body {
+    margin-top: 1rem;
+    padding: 10px 1rem;
+    max-height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    gap: 1rem;
+    justify-content: center;
+    border: 1px solid var(--primary-color);
+    border-radius: var(--border-radius);
+}
+
+.feddbacks .feeds-button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+}
+
+.feeds-button .update {
+    background-color: var(--btn-background);
+}
+
+.feeds-button .update:hover {
+    background-color: var(--btn-background-hover);
+}
+
+.feddbacks a {
+    text-decoration: none;
+    color: var(--secondary-color);
+    padding: 10px 1rem;
+    border-radius: var(--border-radius);
+    transition: background-color 0.3 ease;
 }
 
 /**
@@ -325,7 +414,28 @@ main, footer {
     .articles {
         grid-template-columns: repeat(2, auto);
         justify-content: center;
-    }    
+    }
+    
+    .article-box {
+        padding: 2rem;
+        display: block;
+        align-items: center;
+        width: 100%;
+        gap: 1rem;
+        background-color: red;
+        margin: 0;
+    }
+
+    .article-detaille {
+        max-width: 100%;
+        margin: 1rem;
+        
+    }
+    
+    .feddbacks {
+        max-width: 100%;
+        margin: 1rem;
+    }
 }
 @media screen and (max-width: 700px) {
     nav .humberger {
@@ -350,12 +460,6 @@ main, footer {
         height: 320px;
         background-color: #30363f;
     }
-
-    .articles {
-        width: 80vw;
-        grid-template-columns: repeat(1, auto);
-        justify-content: center;
-    }    
 }
 
 @media screen and (max-width: 500px) {
