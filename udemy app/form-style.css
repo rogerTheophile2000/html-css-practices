@@ -1,0 +1,96 @@
+:root {
+    --background-primary : #fff;
+    --background-secondary : #ccc;
+    --border-radius : 5px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    width: 100vw;
+    overflow-x: hidden;
+    background-color: var(--background-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 100vh;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 90vw;
+    background-color: var(--background-secondary);
+    margin: 1rem;
+    border-radius: var(--border-radius);
+}
+
+.container .image{
+    width: 500px;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+.container .image img{
+    width: 100%;
+}
+
+.container .form-container {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.container .form-container .title{
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.container .form-container form {
+    width: 100%;
+    padding: 1rem;
+}
+
+.container .form-container form div{
+    margin-bottom: 1rem;
+}
+
+.container .form-container form .group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    justify-content: space-between;
+    border-radius: var(--border-radius);
+}
+
+.container .form-container form .group input,
+.container .form-container form .group label,
+.container .form-container form .group textarea {
+    font-size: 1.rem;
+    padding: 10px 20px;
+    max-width: 100%;
+    border-radius: var(--border-radius);
+    border: none;
+}
+
+.container .form-container form .group input{
+    font-size: 1rem;
+}
+
+.container .form-container form .names-group{
+    width: 100%;
+    flex-direction: row;
+}
