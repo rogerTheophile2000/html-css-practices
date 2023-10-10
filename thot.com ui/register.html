@@ -39,47 +39,42 @@
                   <div class="card-body">
   
                     <div class="pt-4 pb-2">
-                      <h5 class="card-title text-center pb-0 fs-4">Login to Your Account</h5>
-                      <p class="text-center small">Enter your username & password to login</p>
+                      <h5 class="card-title text-center pb-0 fs-4">Inscription</h5>
                     </div>
 
                     <form class="row g-3 needs-validation" novalidate>
                         <div class="col-12">
-                          <label for="yourName" class="form-label">Your Name</label>
+                          <label for="yourName" class="form-label">Nom complet</label>
                           <input type="text" name="name" class="form-control" id="yourName" required>
                           <div class="invalid-feedback">Veuillez enter votre nom complet!</div>
                         </div>
     
                         <div class="col-12">
-                          <label for="yourEmail" class="form-label">Your Email</label>
-                          <input type="email" name="email" class="form-control" id="yourEmail" required>
+                          <label for="yourEmail" class="form-label">Email</label>
+                          <div class="input-group">
+                            <span class="input-group-text" id="inputGroupPrepend">@</span>
+                            <input type="email" name="email" class="form-control" id="yourEmail" required>
+                          </div>
                           <div class="invalid-feedback">Veuillez entrez une adresse Email!</div>
                         </div>
     
                         <div class="col-12">
-                          <label for="yourPassword" class="form-label">Password</label>
+                          <label for="yourPassword" class="form-label">Mot de passe</label>
                           <input type="password" name="password" class="form-control" id="yourPassword" required>
                           <div class="invalid-feedback">Entrez le mot de passe!</div>
                         </div>
     
                         <div class="col-12">
-                          <label for="yourPassword" class="form-label">Password</label>
+                          <label for="yourPassword" class="form-label">Confirmer le mot de passe</label>
                           <input type="password" name="password" class="form-control" id="yourPassword" required>
                           <div class="invalid-feedback">Confirmee le mot de passe!</div>
                         </div>
-    
+
                         <div class="col-12">
-                          <div class="form-check">
-                            <input class="form-check-input" name="terms" type="checkbox" value="" id="acceptTerms" required>
-                            <label class="form-check-label" for="acceptTerms">I agree and accept the <a href="#">terms and conditions</a></label>
-                            <div class="invalid-feedback">You must agree before submitting.</div>
-                          </div>
+                          <button class="btn btn-danger w-100" type="submit">S'inscrire</button>
                         </div>
                         <div class="col-12">
-                          <button class="btn btn-primary w-100" type="submit">Create Account</button>
-                        </div>
-                        <div class="col-12">
-                          <p class="small mb-0">Already have an account? <a href="#">Log in</a></p>
+                          <p class="small mb-0">Vous avez déja un compte? <a href="login.html">Connexion</a></p>
                         </div>
                       </form>
                   </div>
